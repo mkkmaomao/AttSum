@@ -26,7 +26,7 @@ parser.add_argument("--dec_layers", default=8, type=int)
 parser.add_argument("--beam_size", default=10, type=int)
 parser.add_argument("--do_lower_case", default=True, type=bool)
 parser.add_argument("--weight_decay", default=0.0, type=float)
-parser.add_argument("--model_name", default="roberta-base", type=str) # default = "microsoft/codebert-base"
+parser.add_argument("--model_name", default="roberta-base", type=str)
 # logs and some other frequently changing args
 parser.add_argument("--best_rouge_model_save_path", default=f'roBERTa_sub_best_brouge_wo_copy.pt', type=str)
 parser.add_argument("--log_file", default=f'logs/log', type=str)

@@ -8,4 +8,6 @@ AttSum is an Encoder-Decoder model incorporating with the copy mechanism for bug
 
 2. new_data folder contains 1) json_counting.py for data processing; 2) and a folder including 50 bug reports with low-quality titles.
 
-3. 
+3. models folder contains the code for AttSum implementation, we do not upload the codes for baselines that can be referred through the corresponding articles.
+
+4. 

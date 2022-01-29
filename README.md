@@ -12,4 +12,5 @@ AttSum is an Encoder-Decoder model incorporating with the copy mechanism for bug
 
 4. data_tools folder includes two .py files for data processing and automatic evaluation.
 
-5.
+5. main.py is for running the program, and mconfig.py is for parameter settings.
+

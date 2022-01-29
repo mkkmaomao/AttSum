@@ -1,8 +1,4 @@
 
-
-# training dataset - 57118 data, every epoch has 14280 batches, batch_size = 4
-# every 200 batches -> avg_Rouge, every 100 batches -> time and train loss
-# every 1750 batches -> rouge_score=evaluate(val_data - 2000 data) need 8 times evaluation
 import random
 import time
 import numpy as np
@@ -62,7 +58,7 @@ optimizer_grouped_parameters = [
     {'params': [p for n, p in model.named_parameters() if any(nd in n for nd in no_decay)], 'weight_decay': 0.0}
 ]
 optimizer = AdamW(optimizer_grouped_parameters, lr=args.learning_rate, eps=1e-8)
-t_total = len(train_dataloader) // args.gradient_accumulation_steps * args.epoch  #  57118//4  * 15 = 71400
+t_total = len(train_dataloader) // args.gradient_accumulation_steps * args.epoch  
 scheduler = get_linear_schedule_with_warmup(optimizer,
                                         num_warmup_steps=int(t_total*0.1),
                                         num_training_steps=t_total)

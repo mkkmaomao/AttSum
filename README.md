@@ -1,9 +1,10 @@
 # AttSum
 
 Code for paper(under review) "AttSum: A Deep Attention-Based Summarization Model for Generating Bug Report Titles"
-![framework](https://user-images.githubusercontent.com/48006443/151654727-093a2e94-9439-4679-8e22-62e0f9291a5e.png)
 
 AttSum is an Encoder-Decoder model incorporating with the copy mechanism for bug report title generation.
+
+![framework](https://user-images.githubusercontent.com/48006443/151654727-093a2e94-9439-4679-8e22-62e0f9291a5e.png)
 
 1. Obtain the preprocessed dataset from the google drive: https://drive.google.com/drive/folders/1Q0zxfFkRP7qjnuRe_3dsRxDN7QywDx-h?usp=sharing
 

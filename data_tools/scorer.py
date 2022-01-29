@@ -18,11 +18,7 @@ def convention_tokenize(text):
     return tokens
 
 def rouge_from_maps(refs, hyps):
-    '''
-    Calculate the sum of the f-values of the three rouge scores in a weighted manner
-    The purpose is to compare with the training results of CodeBERT-text 
-    return avg_score
-    '''
+
     rouge = Rouge()
     # hyps/refs: list[[tokens], [tokens], [tokens]]
     hyps = [' '.join(tokens) for tokens in hyps]

@@ -1,0 +1,302 @@
+﻿[
+    {
+        "number": 3972,
+        "title": "Icon request:  fa-internal-link",
+        "body": "Hello,\\n\\nWe would love the opposite of  fa-external-link: same icon with arrow from outside the box to inside the box!\\n\\nThanks a lot in advance!\\n",
+        "repo": "FortAwesome/Font-Awesome"
+    },
+    {
+        "number": 5250,
+        "title": "Sponsor Ship",
+        "body": " Do you plan to run Sponsor Ship program like webpack, vuejs, gulp and others?\\r\\nYou could collect enough money to hire main contributors on full time work.\\r\\n\\r\\nTake a look at how much webpack is earning\\r\\nhttps://opencollective.com/webpack\\r\\nVueJS\\r\\nhttps://www.patreon.com/evanyou\\r\\n\\r\\nWe at FancyGrid would like to support you and to have logo of our product on your main page.\\r\\nhttps://fancygrid.com\\r\\n",
+        "repo": "chartjs/Chart.js"
+    },
+    {
+        "number": 590,
+        "title": "Issues in singly_linked_list.py",
+        "body": "https://github.com/TheAlgorithms/Python/blob/32db8be93e2821900917daec200a0c914b7cc00c/data_structures/linked_list/singly_linked_list.py#L16-L20\\r\\n\\r\\nLine 17 `def insert_head(Head, data):` 1st parameter must be `self`\\r\\nLine 20 `newNod = Node()` Node() takes 1 parameter (data)",
+        "repo": "TheAlgorithms/Python"
+    },
+    {
+        "number": 2520,
+        "title": "still cloning",
+        "body": "i have some ideas about the project and want to contribute, i started cloning the repo 3 months ago and it's still in the `remote: Counting objects` phase, how big exactly is the project?",
+        "repo": "kelseyhightower/nocode"
+    },
+    {
+        "number": 24029,
+        "title": "Why intellesense for installed node modules  is not showing until I press Ctrl + space for typescript in vs code version : 1.11.0",
+        "body": "I upgraded to vs code version 1.11.0 and opened my project. When I try to use import statement in the code, code completion is not working for installed node module name until I press ctr + space. But previously (before upgrade) when I start type the node module name in (import {foo} from 'fo') I see suggestions. for foo file but now (after upgrade) it is not working. \\r\\n\\r\\n- VSCode Version: 1.11.0\\r\\n- OS Version: windows 10\\r\\n\\r\\nSteps to Reproduce:\\r\\n\\r\\n1. use vs code version 1.11.0\\r\\n2. install a node module\\r\\n3. Try to import the node module in a ts file or try to require the node module in js file.\\r\\n```\\r\\nimport {foo} from 'foo'\\r\\n```\\r\\nor\\r\\n```\\r\\nlet foo = require('foo');\\r\\n```\\r\\n",
+        "repo": "microsoft/vscode"
+    },
+    {
+        "number": 16440,
+        "title": "Thrown \\error TS4022: 'extends' clause of exported interface '...' has or is using private name ...\\\" with --declaration flag and mixing imported export name with equal export interface name\"",
+        "body": "**TypeScript Version:** 2.3.4 and nightly (2.4.0-dev.20170610)\\r\\n\\r\\nTrying to build up a hierarchical namespace structure with modules. \\r\\nAll seems fine till setting --declaration flag to true.\\r\\n\\r\\n**Code**\\r\\n\\r\\n`index.ts`\\r\\n```ts\\r\\nimport * as Service from './Service';\\r\\n\\r\\nclass MySuccessMessage implements Service.Response.Message {\\r\\n  public type = 'successMessage'\\r\\n}\\r\\n\\r\\nclass MyResponse implements Service.Response {\\r\\n  public message: MySuccessMessage = new MySuccessMessage();\\r\\n}\\r\\n\\r\\nclass MyTypedResponse implements Service.TypedResponse {\\r\\n  public type = 'successResponse';\\r\\n  public message: MySuccessMessage = new MySuccessMessage();\\r\\n}\\r\\n\\r\\nconsole.log((new MyResponse()).message.type);\\r\\nconsole.log((new MyTypedResponse()).type);\\r\\n```\\r\\n\\r\\n`Service.ts`\\r\\n```ts\\r\\nimport * as Response from './Response';\\r\\nexport { Response };\\r\\n\\r\\nexport interface Response {\\r\\n  message: Response.Message;\\r\\n}\\r\\n\\r\\nexport interface TypedResponse extends Response {\\r\\n  type: string;\\r\\n  message: Response.Message;\\r\\n}\\r\\n```\\r\\n\\r\\n`Response.ts`\\r\\n```ts\\r\\nexport interface Message {\\r\\n  key?: string;\\r\\n  type: string;\\r\\n}\\r\\n```\\r\\nCompiling with:\\r\\n```json\\r\\n{\\r\\n  \\compilerOptions\\\": {\\r\\n    \\\"baseUrl\\\": \\\"\\\",\\r\\n    \\\"outDir\\\": \\\"../dist/app\\\",\\r\\n    \\\"target\\\": \\\"es2015\\\",\\r\\n    \\\"module\\\": \\\"commonjs\\\",\\r\\n    \\\"moduleResolution\\\": \\\"node\\\",\\r\\n    \\\"sourceMap\\\": true,\\r\\n    \\\"emitDecoratorMetadata\\\": true,\\r\\n    \\\"experimentalDecorators\\\": true,\\r\\n    \\\"declaration\\\": true\\r\\n  }\\r\\n}\\r\\n\\r\\n```\\r\\n\\r\\n**Expected behavior:**\\r\\nNo errors while compiling and printing out:\\r\\n```\\r\\nsuccessMessage\\r\\nsuccessResponse\\r\\n```\\r\\njust like it does without setting `--declaration` to true or by removing the `extends Response ` from `export interface TypedResponse extends Response`.\\r\\n\\r\\n**Actual behavior:**\\r\\nGetting error:\\r\\n```\\r\\nsrc/Service.ts(8,40): error TS4022: 'extends' clause of exported interface 'TypedResponse' has or is using private name 'Response'.\\r\\n```\\r\\n\\r\\nsample project with code from above:\\r\\n[export-error-test.zip](https://github.com/Microsoft/TypeScript/files/1066191/export-error-test.zip)\\r\\n\\r\\n\"",
+        "repo": "microsoft/TypeScript"
+    },
+    {
+        "number": 15497,
+        "title": "When doing an exponential backoff on a mono coming from a WebClient that has an error, an unexpected error is printed in the console",
+        "body": "Problem: When doing an exponential backoff on a mono coming from a WebClient that has an error the following exception is printed in the console:\\r\\n```java.lang.IllegalStateException: Only one connection receive subscriber allowed. ``` \\r\\n\\r\\nVersion: Spring boot 2.1.1\\r\\n \\r\\nI made an example project to demonstrate this problem: \\r\\nhttps://github.com/robisrob/webclient_bug\\r\\n\\r\\n\\r\\n",
+        "repo": "spring-projects/spring-boot"
+    },
+    {
+        "number": 9050,
+        "title": "hi i have used angular2 in my project but i have big problem with angular2 , when i make and use angular component , unfortunately angular put selector tag on dom so my css selector doesn't work correctly . please help me thank you.",
+        "body": "- **I'm submitting a ...**\\n- [ ] bug report\\n- [x] feature request\\n- [ ] support request => Please do not submit support request here, see note at the top of this template.\\n\\n**Current behavior**\\n\\n**Expected/desired behavior**\\n- **If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem** via\\n  https://plnkr.co or similar (you can use this template as a starting point: http://plnkr.co/edit/tpl:AvJOMERrnz94ekVua0u5).\\n- **What is the expected behavior?**\\n- **What is the motivation / use case for changing the behavior?**\\n- **Please tell us about your environment:**\\n- **Angular version:** 2.0.0-beta.X \\n- **Browser:** [all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Android X.X Web Browser | iOS XX Safari | iOS XX UIWebView | iOS XX WKWebView ] \\n- **Language:** [all | TypeScript X.X | ES6/7 | ES5 | Dart] \\n",
+        "repo": "angular/angular"
+    },
+    {
+        "number": 18263,
+        "title": "Using spring boot 2.1.2.release to enable multithreading in the controller, and using requester getParameter(), multiple requests will always get null several times, but I'm sure the request address has this input.This problem is not repeated in 1.3.2.release.",
+        "body": "Using spring boot 2.1.2.release to enable multithreading in the controller, and using requester getParameter(), multiple requests will always get null several times, but I'm sure the request address has this input.This problem is not repeated in 1.3.2.release.\\r\\nPom attached:\\r\\n\\r\\n```xml\\r\\n<?xml version=\\1.0\\\" encoding=\\\"UTF-8\\\"?>\\r\\n<project xmlns=\\\"http://maven.apache.org/POM/4.0.0\\\"\\r\\n         xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"\\r\\n         xsi:schemaLocation=\\\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\\\">\\r\\n    <modelVersion>4.0.0</modelVersion>\\r\\n\\r\\n    <groupId>com.kpi</groupId>\\r\\n    <artifactId>AutoTest</artifactId>\\r\\n    <version>1.0-SNAPSHOT</version>\\r\\n\\r\\n    <parent>\\r\\n        <groupId>org.springframework.boot</groupId>\\r\\n        <artifactId>spring-boot-starter-parent</artifactId>\\r\\n        <version>2.1.2.RELEASE</version>\\r\\n        <relativePath/> <!-- lookup parent from repository -->\\r\\n    </parent>\\r\\n\\r\\n    <properties>\\r\\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\\r\\n        <java.version>1.8</java.version>\\r\\n    </properties>\\r\\n\\r\\n    <dependencies>\\r\\n        <dependency>\\r\\n            <groupId>org.springframework.boot</groupId>\\r\\n            <artifactId>spring-boot-starter</artifactId>\\r\\n        </dependency>\\r\\n\\r\\n        <dependency>\\r\\n            <groupId>org.springframework.boot</groupId>\\r\\n            <artifactId>spring-boot-starter-test</artifactId>\\r\\n            <scope>test</scope>\\r\\n        </dependency>\\r\\n\\r\\n        <dependency>\\r\\n            <groupId>org.springframework.boot</groupId>\\r\\n            <artifactId>spring-boot-starter-web</artifactId>\\r\\n            <exclusions>\\r\\n                <exclusion>\\r\\n                    <groupId>org.springframework.boot</groupId>\\r\\n                    <artifactId>spring-boot-starter-tomcat</artifactId>\\r\\n                </exclusion>\\r\\n            </exclusions>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>org.springframework.boot</groupId>\\r\\n            <artifactId>spring-boot-starter-tomcat</artifactId>\\r\\n            <scope>provided</scope>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>org.apache.tomcat</groupId>\\r\\n            <artifactId>tomcat-servlet-api</artifactId>\\r\\n            <version>7.0.42</version>\\r\\n            <scope>provided</scope>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>org.apache.httpcomponents</groupId>\\r\\n            <artifactId>httpclient</artifactId>\\r\\n            <version>4.5.2</version>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>org.springframework.boot</groupId>\\r\\n            <artifactId>spring-boot-starter-redis</artifactId>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>org.springframework.boot</groupId>\\r\\n            <artifactId>spring-boot-starter-thymeleaf</artifactId>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>com.google.guava</groupId>\\r\\n            <artifactId>guava</artifactId>\\r\\n            <version>27.0.1-jre</version>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>com.alibaba</groupId>\\r\\n            <artifactId>fastjson</artifactId>\\r\\n            <version>1.2.54</version>\\r\\n            <scope>test</scope>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>com.alibaba</groupId>\\r\\n            <artifactId>fastjson</artifactId>\\r\\n            <version>1.2.54</version>\\r\\n            <scope>compile</scope>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>mysql</groupId>\\r\\n            <artifactId>mysql-connector-java</artifactId>\\r\\n            <version>8.0.11</version>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>org.apache.pdfbox</groupId>\\r\\n            <artifactId>pdfbox</artifactId>\\r\\n            <version>2.0.15</version>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>org.apache.pdfbox</groupId>\\r\\n            <artifactId>fontbox</artifactId>\\r\\n            <version>2.0.15</version>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>com.amazonaws</groupId>\\r\\n            <artifactId>aws-java-sdk</artifactId>\\r\\n            <version>1.11.547</version>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>org.mybatis.spring.boot</groupId>\\r\\n            <artifactId>mybatis-spring-boot-starter</artifactId>\\r\\n            <version>1.1.1</version>\\r\\n        </dependency>\\r\\n        <dependency>\\r\\n            <groupId>org.junit.jupiter</groupId>\\r\\n            <artifactId>junit-jupiter-api</artifactId>\\r\\n            <version>RELEASE</version>\\r\\n            <scope>compile</scope>\\r\\n        </dependency>\\r\\n\\r\\n    </dependencies>\\r\\n\\r\\n    <build>\\r\\n        <plugins>\\r\\n            <plugin>\\r\\n                <groupId>org.springframework.boot</groupId>\\r\\n                <artifactId>spring-boot-maven-plugin</artifactId>\\r\\n            </plugin>\\r\\n        </plugins>\\r\\n    </build>\\r\\n</project>\\r\\n```\\r\\n\\r\\ncontroller code\\uff1a\\r\\n\\r\\n```java\\r\\n    @RequestMapping(\\\"/test\\\")\\r\\n    @ResponseBody\\r\\n    public Map returnFlexJsp(HttpServletRequest request, HttpServletResponse response) throws InterruptedException {\\r\\n        Map<String,Object> result = new HashMap<String, Object>();\\r\\n        result.put(\\\"1\\\",\\\"1\\\");\\r\\n        String[] methods={\\\"a\\\",\\\"b\\\",\\\"c\\\"};\\r\\n        ExecutorService service = Executors.newFixedThreadPool(methods.length);\\r\\n        CountDownLatch countDownLatch = new CountDownLatch(methods.length);\\r\\n        for (String method : methods) {\\r\\n            service.execute(new Runnable() {\\r\\n                @Override\\r\\n                public void run() {\\r\\n                    try {\\r\\n                        String beginWeekDay = request.getParameter(\\\"aaa\\\");\\r\\n                        System.out.println(\\\"aaa\\\");\\r\\n                        beginWeekDay.isEmpty();\\r\\n                    } catch (Exception e) {\\r\\n                        e.printStackTrace();\\r\\n                    }\\r\\n                    finally {\\r\\n                        countDownLatch.countDown();\\r\\n                    }\\r\\n                }\\r\\n            });\\r\\n\\r\\n        }\\r\\n        countDownLatch.await();\\r\\n        return result;\\r\\n    }\\r\\n```\\r\\n\\r\\nA null-pointer exception always occurs when a request is sent multiple times\"",
+        "repo": "spring-projects/spring-boot"
+    },
+    {
+        "number": 7910,
+        "title": "IOS development of App which running on the ionic2  requesting data  through Http protocol  does not refresh dataset (but when clicking on the screen, that could refresh dataset yet) . Is there no access manually method to directly  the pagefront end .",
+        "body": "**Note: If you are having problems formatting your issue please refer to this article on using markdown in Github:**\\n\\nhttps://guides.github.com/features/mastering-markdown/\\n\\n**Note: for support questions, please use one of these channels:** \\n\\nhttps://forum.ionicframework.com/\\nhttp://ionicworldwide.herokuapp.com/\\n#### Short description of the problem:\\n#### What behavior are you expecting?\\n\\n**Steps to reproduce:**\\n1. \\n2. \\n3. \\n\\n```\\ninsert any relevant code between the above and below backticks\\n```\\n\\n**Other information:** (e.g. stacktraces, related issues, suggestions how to fix, stackoverflow links, forum links, etc)\\n\\n**Which Ionic Version?** 1.x or 2.x\\n#### Plunker that shows an example of your issue\\n\\n**For Ionic 1 issues** - http://plnkr.co/edit/Xo1QyAUx35ny1Xf9ODHx?p=preview\\n\\n**For Ionic 2 issues** - http://plnkr.co/edit/me3Uk0GKWVRhZWU0usad?p=preview\\n\\n**Run `ionic info` from terminal/cmd prompt:** (paste output below)\\n",
+        "repo": "ionic-team/ionic"
+    },
+    {
+        "number": 2713,
+        "title": "i am trying to install caffe in my ubuntu 14.04 system and geting the following error when i did \\make test\\\"...please someone help\"",
+        "body": "i CXX/LD -o .build_release/test/test_all.testbin src/caffe/test/test_caffe_main.cpp\\n/usr/lib/libcaffe.so: undefined reference to `cblas_sgemv'\\n/usr/lib/libcaffe.so: undefined reference to`cblas_dgemm'\\n/usr/lib/libcaffe.so: undefined reference to `cblas_sscal'\\n/usr/lib/libcaffe.so: undefined reference to`cblas_dgemv'\\n/usr/lib/libcaffe.so: undefined reference to `cblas_saxpy'\\n/usr/lib/libcaffe.so: undefined reference to`cblas_ddot'\\n/usr/lib/libcaffe.so: undefined reference to `cblas_dasum'\\n/usr/lib/libcaffe.so: undefined reference to`cblas_sgemm'\\n/usr/lib/libcaffe.so: undefined reference to `cblas_dscal'\\n/usr/lib/libcaffe.so: undefined reference to`cblas_scopy'\\n/usr/lib/libcaffe.so: undefined reference to `cblas_sasum'\\n/usr/lib/libcaffe.so: undefined reference to`cblas_daxpy'\\n/usr/lib/libcaffe.so: undefined reference to `cblas_dcopy'\\n/usr/lib/libcaffe.so: undefined reference to`cblas_sdot'\\ncollect2: error: ld returned 1 exit status\\n",
+        "repo": "BVLC/caffe"
+    },
+    {
+        "number": 11404,
+        "title": "Build TF 1.2 error: no such package '@nccl_archive//' OR undeclared inclusion(s) in rule '@nccl_archive//:nccl': this rule is missing dependency declarations for the following files included by 'external/nccl_archive/src/libwrap.cu.cc':",
+        "body": "Hi\\uff0cI compiled tensorflow r1.0 successfully with Centos 7.0\\uff0ccuda 8.0 and CUDNN 6.5\\uff0cgcc 4.8.5.  Recently\\uff0cWe want follow the latest version of Tensorflow\\uff0cerror below are always occur:\\r\\n\\r\\n`ERROR: /home/jiangbo/tensorflow/tensorflow/tools/pip_package/BUILD:76:1: no such package '@nccl_archive//': /home/jiangbo/.cache/bazel/_bazel_jiangbo/0c80707bb0528f07a36b6bc1e1bf9b14/external/nccl_archive/build (Operation not permitted) and referenced by '//tensorflow/tools/pip_package:licenses'.\\r\\nERROR: Analysis of target '//tensorflow/tools/pip_package:build_pip_package' failed; build aborted.\\r\\n`\\r\\nMy bazel version have tried 0.4.5 and 0.5.2, but compile error.  Some method to solve this problem I have tried but no one helps , any body knows this problem, please tell me or let me know you thought.\\r\\n\\r\\nAfter I compiled TF r1.2 error, I have checkout to r1.0. it is weird, the same error info again.\\r\\n",
+        "repo": "tensorflow/tensorflow"
+    },
+    {
+        "number": 17160,
+        "title": "Docs: AssetBundle.load isn't very useful",
+        "body": "API Docs: https://docs.flutter.io/flutter/services/AssetBundle/load.html\\r\\n\\r\\nUnfortunately, as viewed in [this stack overflow post](https://stackoverflow.com/questions/50119676/how-to-write-a-bytedata-instance-to-a-file-in-dart), it's not apparent to users what `ByteData` can be used for/with. Perhaps the docs for the `load` method should give an example or two.",
+        "repo": "flutter/flutter"
+    },
+    {
+        "number": 919,
+        "title": "sidebar-wrapper",
+        "body": "In the layout section of the docs I've read that \\n\\n> Sidebar `.sidebar-wrapper`. Contains the user panel and sidebar menu.\\n\\nbut I couldn't find any reference to this class. In fact in the examples it seems that a class `.main-sidebar` is always used as the sidebar wrapper.\\n\\nWhich one is the correct one, maybe the docs are not in sync?\\n",
+        "repo": "ColorlibHQ/AdminLTE"
+    },
+    {
+        "number": 1958,
+        "title": "big bug for http-agent keep alive??",
+        "body": "I found it doesn't work , \\nwell ,maybe my test way isn't correct , but please just check keep-alive feature  again\\nI think the  test file : test-http-keep-alive.js isn't so valuable.\\n\\nmy test code :\\n\\nclient:\\n\\n``` js\\nvar count = 10;\\nvar agent = new http.Agent({\\maxSockets\\\" : 3});\\nvar options = {\\nhost: 'localhost',\\n  port: 3458,\\n  path: '/',\\n  method: 'GET',\\n  agent : agent,\\n  headers : {\\\"Connection\\\" : \\\"keep-alive\\\"}\\n};\\n\\nfunction looptest(){\\n var req = http.request(options, function(res){\\n    res.on(\\\"end\\\", function(){\\n        console.log(\\\"count : \\\" + count);\\n        if(--count <= 0){ \\n\\n         }else{\\n            process.nextTick(function(){\\n            looptest();\\n          }); \\n        }   \\n    }); \\n}); \\n req.end();\\n}\\n\\nlooptest();\\n```\\n\\nthe server  is writen by me ,and when it got a connection it will print a line\\nthe js test result  is 10 lines:\\n\\nget a connection\\nget a connection\\nget a connection\\nget a connection\\nget a connection\\nget a connection\\nget a connection\\nget a connection\\nget a connection\\nget a connection\\n\\nI think it should  print only one line ,since we use keep-alive and only one socket is used!!!!!!\\n\\nso I check it with siege  (keep-alive mode)\\n\\n```\\n siege -c 1 -r 10 localhost:3458/\\n```\\n\\nthe result is one line :\\n\\nget a connection\\n\\nwhy??\\n\"",
+        "repo": "nodejs/node-v0.x-archive"
+    },
+    {
+        "number": 14484,
+        "title": "My trained checkpoint doesn't work.",
+        "body": "    $ python3 tests/test_snapshot.py lsp out/lsp_alexnet_imagenet_small/checkpoint-370000.data-00000-of-00001\\r\\n\\r\\nBut it shows this error\\r\\n\\r\\nData loss: not an sstable (bad magic number): perhaps your file is in a different file format and you need to use a different restore operator? Traceback (most recent call last):\\r\\n\\r\\nDataLossError (see above for traceback): Unable to open table file out/lsp_alexnet_imagenet_small/checkpoint-370000.data-00000-of-00001: Data loss: not an sstable (bad magic number): perhaps your file is in a different file format and you need to use a different restore operator?\\r\\n\\r\\n\\r\\n",
+        "repo": "tensorflow/tensorflow"
+    },
+    {
+        "number": 4853,
+        "title": "Web page https://redis.io/commands# is terrible",
+        "body": "Web page https://redis.io/commands# is terrible design wise. We want a proper listing command list to navigate quickly. (sry if its not the right place for this)",
+        "repo": "antirez/redis"
+    },
+    {
+        "number": 16184,
+        "title": "cmd/pprof: sync with upstream  https://github.com/google/pprof ?",
+        "body": "The pprof tool was initially an import of Google's internal version, which is now on GitHub. Can we just switch to that new repo? Are there patches in Go's copy that need to be pushed upstream to make google/pprof work with current Go binaries?\\n\\nMaybe this ends up just being a doc fix saying \\you can also use this other pprof tool over here\\\".\\n\"",
+        "repo": "golang/go"
+    },
+    {
+        "number": 21231,
+        "title": "net: DialContextTCP()",
+        "body": "Hello! I've search for some similar issues and found [this one](https://github.com/golang/go/issues/3097) but looks like it is stale now.\\r\\n\\r\\nMy issue points to inability to dial via tcp with custom `context.Context` passed.\\r\\n\\r\\n[Current implementation](https://github.com/golang/go/blob/bf4cd98c8b5b61f53b98333564f343ec54386acd/src/net/tcpsock_posix.go#L54-L59) of `net.DialTCP()` (actually `net.dialTCP`) is absolutely ready to receive context for dial, but has no exported wrapper that can receive it.",
+        "repo": "golang/go"
+    },
+    {
+        "number": 37,
+        "title": "Trim down",
+        "body": "How curated is this list? Many of the links have spammy titles and low-quality content.  The javascript section is almost a straight copy-paste from google results. Take this one:\\n\\n[JavaScript Interview Questions have been designed specially to get you acquainted with the nature of questions you may encounter during your interview for the subject of JavaScript ](http://www.tutorialspoint.com/javascript/javascript_interview_questions.htm)\\n\\nNot only is it outdated, but contains non-sense: _JavaScript is complementary to and integrated with Java_.\\n\\nThis list would be much more useful with some editorializing. Considering how popular this project got it's also important to link to correct content. Would you accept a PR removing/replacing multiple links at once?\\n",
+        "repo": "MaximAbramchuck/awesome-interview-questions"
+    },
+    {
+        "number": 6495,
+        "title": "$anchorScroll feature",
+        "body": "`Element.scrollIntoView` has a boolean it can have passed to it, this is a very important feature when it comes to scrolling.\\n\\nvery often, a page will have fixed navigation so at the very minimum I think this option should be able to be set inside of `$anchorScroll`. Or some sort of API where you can set an offset on the scroll position of an anchor.\\n",
+        "repo": "angular/angular.js"
+    },
+    {
+        "number": 1324,
+        "title": "Lighting",
+        "body": "Hi,\\n\\nI was left unsure about the final verdict on this one so just to clarify am I right in saying that this is a bug: http://gnitsuk.leadhoster.com/ThreeTest/Test5.html (Click to start rotation).\\n\\nThat both in CanvasRenderer AND WebGLRenderer the doubleSided property of the mesh does NOT work as regards responding to lighting.\\n\\nSorry if this was already said or a fix given I just wanted to be sure, I really need this double sided lighting in what I'm doing and so any fix/workarounds would be good to know in the meantime I'll keep on experimenting.\\n\\nThanks,\\nMitch.\\n",
+        "repo": "mrdoob/three.js"
+    },
+    {
+        "number": 8273,
+        "title": "Rendering a collection doesn't pass a local variable when to_partial_path is changed from the default",
+        "body": "Rails: 3.2.9\\nRuby: 1.9.3.194\\n\\nIf you change #to_partial_path in a model\\nand use the default render case for collections\\nthe local variable no longer gets passed.\\n\\napp/models/event.rb\\n\\n``` ruby\\nclass Event\\n    extend ActiveModel::Naming\\n    include ActiveModel::Conversion\\n\\n    attr_accessor :id, :type, :team_id, :created_at\\n\\n    def initialize(attributes = {})\\n        attributes.each do |key, value|\\n            self.public_send(\\#{key}=\\\", value)\\n        end\\n    end\\n\\n    def persisted?\\n        false\\n    end\\n\\n    def to_partial_path\\n        \\\"events/#{type}\\\"\\n    end\\n\\n    def self.list\\n        ActiveRecord::Base.connection.exec_query(\\\"\\n            SELECT\\n                id,\\n                type,\\n                team_id,\\n                created_at\\n            FROM flag_events\\n            UNION ALL\\n            SELECT\\n                id,\\n                'challenge' AS type,\\n                team_id,\\n                created_at\\n            FROM challenge_completed_events\\n        \\\").map do |record|\\n            Event.new(record)\\n        end\\n    end\\nend\\n```\\n\\napp/views/events/index.html.erb\\n\\n``` ruby\\n<%= render @events %>\\n```\\n\\napp/views/events/_challenge.html.erb\\n\\n``` ruby\\n<tr>\\n  <td><%= event.created_at %></td>\\n   ...\\n</tr>\\n```\\n\\nSo I expected that Rails would render my collection\\nand call #to_partial_path each time on the object\\nand pass in a local variable called 'event'\\njust like it does when rendering collections that\\ndon't have a changed to_partial_path.\\n\\nIt doesn't work. The views are rendered but\\nthe local variable isn't passed in.\\n\\nI get\\n\\n```\\nundefined local variable or method `event' for #<#<Class:0x0000020116da48>:0x0000020fa184a0>\\n```\\n\\nHmm ok. Well Rails didn't pass the local variable.\\n\\nSo I tried:\\n\\n``` ruby\\n<%= render @events, :as => :event %>\\n```\\n\\nSame error. :(\\n\\nFinally I got it working with:\\n\\n``` ruby\\n<%= render :partial => @events, :as => :event %>\\n```\\n\\nIn my view this is a bug.\\nFrom reading the documentation\\n\\nhttp://api.rubyonrails.org/classes/ActionView/PartialRenderer.html\\n\\nit seems the default case\\n\\n``` ruby\\n<%= render @events %>\\n```\\n\\nshould work.\\n\\nIs that not the case?\\n\"",
+        "repo": "rails/rails"
+    },
+    {
+        "number": 9210,
+        "title": "HI ,now i want use SSIM as the loss function, and I already know about the forward propagation for MATLAB,However, I do not know the reverse propagation process of ssim. Do you have any ideas or references?and my project is working on matlab.Looking forward to your reply.",
+        "body": "Please make sure that the boxes below are checked before you submit your issue. If your issue is an implementation question, please ask your question on [StackOverflow](http://stackoverflow.com/questions/tagged/keras) or [join the Keras Slack channel](https://keras-slack-autojoin.herokuapp.com/) and ask there instead of filing a GitHub issue.\\r\\n\\r\\nThank you!\\r\\n\\r\\n- [ ] Check that you are up-to-date with the master branch of Keras. You can update with:\\r\\npip install git+git://github.com/keras-team/keras.git --upgrade --no-deps\\r\\n\\r\\n- [ ] If running on TensorFlow, check that you are up-to-date with the latest version. The installation instructions can be found [here](https://www.tensorflow.org/get_started/os_setup).\\r\\n\\r\\n- [ ] If running on Theano, check that you are up-to-date with the master branch of Theano. You can update with:\\r\\npip install git+git://github.com/Theano/Theano.git --upgrade --no-deps\\r\\n\\r\\n- [ ] Provide a link to a GitHub Gist of a Python script that can reproduce your issue (or just copy the script here if it is short).\\r\\n",
+        "repo": "keras-team/keras"
+    },
+    {
+        "number": 499,
+        "title": "Challenge http://www.freecodecamp.com/challenges/drop-it-like-its-hot has an issue ",
+        "body": "Basic Algorithm Scripting - Bonfire #34 - Drop it Like It's Hot link gives error: \\n\\n404: We couldn't find a challenge with that name. Please double check the name.\\n\\nBrowser: Chrome 43.0.2357.65\\n",
+        "repo": "freeCodeCamp/freeCodeCamp"
+    },
+    {
+        "number": 29811,
+        "title": "`http2.connect` with url starting with \\http://\\\" does not pass options to `net.connect`\"",
+        "body": "* **Version**:\\r\\nv12.11.1\\r\\n\\r\\n* **Platform**:\\r\\nWindows Subsystem Linux\\r\\nLinux A062787428 4.4.0-17134-Microsoft #706-Microsoft Mon Apr 01 18:13:00 PST 2019 x86_64 x86_64 x86_64 GNU/Linux\\r\\n\\r\\n\\r\\n\\r\\n`net.connect()` options has no effect when I execute `http2.connect`,  thought [The document](https://nodejs.org/api/http2.html#http2_http2_connect_authority_options_listener) says \\Any net.connect() or tls.connect() options can be provided.\\\"\\r\\n\\r\\nRelated codes is [here](https://github.com/nodejs/node/blob/ddcd2359f4adc9fe34e793ad5c1ed33ce500eed7/lib/internal/http2/core.js#L2900) which does not pass options of `http2.connect` to `net.connect()`.\\r\\n\\r\\nCode to reproduce.\\r\\n```\\r\\n'use strict';\\r\\nconst common = require('../common');\\r\\nif (!common.hasMultiLocalhost())\\r\\n  common.skip('platform-specific test.');\\r\\n\\r\\nconst http2 = require('http2');\\r\\nconst assert = require('assert');\\r\\n\\r\\nconst server = http2.createServer((req, res) => {\\r\\n  console.log(`Connect from: ${req.connection.remoteAddress}`);\\r\\n  assert.strictEqual(req.connection.remoteAddress, '127.0.0.2');\\r\\n\\r\\n  req.on('end', () => {\\r\\n    res.writeHead(200, { 'Content-Type': 'text/plain' });\\r\\n    res.end(`You are from: ${req.connection.remoteAddress}`);\\r\\n  });\\r\\n  req.resume();\\r\\n});\\r\\n\\r\\nserver.listen(0, '127.0.0.1', () => {\\r\\n  const options = { localAddress: '127.0.0.2' };\\r\\n\\r\\n  const client = http2.connect('http://localhost:' + server.address().port, options);\\r\\n  const req = client.request({\\r\\n    ':path': '/'\\r\\n  });\\r\\n  req.on('data', () => req.resume())\\r\\n  req.on('end', function() {\\r\\n    client.close();\\r\\n    req.close();\\r\\n    server.close();\\r\\n    process.exit();\\r\\n  });\\r\\n  req.end();\\r\\n});\\r\\n```\\r\\n\"",
+        "repo": "nodejs/node"
+    },
+    {
+        "number": 20979,
+        "title": "fetchMetadata: sill fetchPackageMetaData error for map-obj@^1.0.1 request to https://registry.npmjs.org/map-obj failed, reason: socket hang up",
+        "body": "Version: nodejs 10.2.1\\r\\nPlatform: Linux 4.16.11-1-ARCH\\r\\n\\r\\nSince nodejs-10.2.0 release I get a lot of problems. After the compilation issue reported 2 days ago, now there are issues during fetch: \\r\\n\\r\\n.................] - fetchMetadata: sill fetchPackageMetaData error for map-obj@^1.0.1 request to https://registry.npmjs.org/map-obj failed, reason: socket hang up\\r\\n\\r\\nI need nodejs to build opennebula and since the release of node-10.2.x I can't do my work. \\r\\nEverything work very well with older version. \\r\\n\\r\\nCan you plz fix this issue, thx.\\r\\n\\r\\n\\r\\n",
+        "repo": "nodejs/node"
+    },
+    {
+        "number": 9555,
+        "title": "Revert sudo change to https doc file from https://github.com/docker/docker/commit/fc9a3b1c1b835c170a4916362855e127a0e366e1 ",
+        "body": "[Running Docker with HTTPS - Docker Documentation](https://docs.docker.com/articles/https/) notes that\\n\\n> \\Warning: As shown in the example above, you don't                  have to run the docker client with sudo\\\"\\n\\nBut https://github.com/docker/docker/commit/fc9a3b1c1b835c170a4916362855e127a0e366e1 changed all the docker commands in that documentation file, preceding each with \\\"sudo\\\".\\n\\nThat commit should be reverted for that file.\\n\"",
+        "repo": "moby/moby"
+    },
+    {
+        "number": 2041,
+        "title": "ubuntu 14 failed to fetch http://ppa.launchpad.net 403 Forbidden",
+        "body": "reading the Wiki:\\r\\n`sudo add-apt-repository ppa:alex-p/tesseract-ocr`\\r\\n`sudo apt-get update`\\r\\nbut getting the error\\r\\n\\r\\n`W: Failed to fetch http://ppa.launchpad.net/ondrej/php5-5.6/ubuntu/dists/trusty/main/binary-amd64/Packages  403  Forbidden`\\r\\n\\r\\n`W: Failed to fetch http://ppa.launchpad.net/ondrej/php5-5.6/ubuntu/dists/trusty/main/binary-i386/Packages  403  Forbidden`\\r\\n",
+        "repo": "tesseract-ocr/tesseract"
+    },
+    {
+        "number": 79944,
+        "title": "JavaScript highlight bug",
+        "body": "When I write this code everything below changes to a single color.\\r\\n\\r\\n**[Imagen]** https://imgur.com/CTzMMW2\\r\\n\\r\\n`for(var i = 0; i<30; i++)...`\\r\\n\\r\\nI have version 1.37.1 and it didn't happen in the previous version.\\r\\n\\r\\n**Update**\\r\\n\\r\\nChange the themes and it's still the same.\\r\\n\\r\\n**Update a English**",
+        "repo": "microsoft/vscode"
+    },
+    {
+        "number": 31409,
+        "title": "Http failure response for http://192.168.252.10:10204/login: 0 Unknown Error on IOS browser",
+        "body": "\\r\\nI'm creating a WebApp with anngular that needs to run on windows, android and ios, I created a login form that contacts the server and receives a JSON with code 200 if the login is successful or 400 if the login isn't successful,trying on windows and android works perfectly it doesn't work on ios 12, it gives me an error\\r\\n\\r\\n> Http failure response for http://192.168.252.10:10204/login: 0 Unknows Error\\r\\n\\r\\nThe tests done on ios have been done both with chrome, safare and firefox and give the same error, can anyone help me?\\r\\n\\r\\nOn the header that comes from the server there are these fields, are they missing?\\r\\n\\r\\n    res.header('Access-Control-Allow-Origin', '*');\\r\\n    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, POST, DELETE, OPTIONS');\\r\\n    res.header('Access-Control-Allow-Headers', 'Origin, Content-Type, Accept, Authorization, X-Request-With');\\r\\n    res.header('Access-Control-Max-Age', '86400');\\r\\n    res.header('Access-Control-Expose-Headers','Content-Length, X-JSON');\\r\\n    res.header('Content-Type','application/json');\\r\\n\\r\\n",
+        "repo": "angular/angular"
+    },
+    {
+        "number": 5446,
+        "title": "Popover doesn't update when template is changed",
+        "body": "``` javascript\\nvar i = 0;\\n$('a#test').click(function() {\\n    i += 1;\\n\\n    $('a#test').popover({\\n        trigger: 'manual',\\n        placement: 'right',\\n        template: function () {\\n            return '<div class=\\custom-popover\\\">Count is ' + i + '</div>';\\n        },\\n        title: 'dontcare'\\n    });\\n    $('a#test').popover(\\\"show\\\");\\n});\\u200b\\n```\\n\\nI get a HIERARCHY_REQUEST_ERR error: http://jsfiddle.net/ajbeaven/DszLt/8/\\n\\nI would have thought that on `$('a#test').popover(\\\"show\\\");`, the popup would have been updated with the new template, like what happens when you do the same with content: http://jsfiddle.net/ajbeaven/DszLt/6/\\n\"",
+        "repo": "twbs/bootstrap"
+    },
+    {
+        "number": 11486,
+        "title": "mattn/go-sqlite3 outdated, does not compile on Solaris",
+        "body": "I experienced the issue mentioned in\\r\\n\\r\\nhttps://github.com/mattn/go-sqlite3/issues/514\\r\\n\\r\\nI copied in the grafana/vendor/mattn the latest release and the issue disappeared.\\r\\n\\r\\nPlease update go-sqlite3 to the latest version, so that the compilation completes without issues on Solaris.",
+        "repo": "grafana/grafana"
+    },
+    {
+        "number": 2024,
+        "title": "transformFile is incompatible with es6-promisify in 5.7.x",
+        "body": "With babel-core 5.6.20, this works:\\n\\n``` js\\nvar babel = require('babel-core')\\nvar promisify = require('es6-promisify')\\n\\npromisify(babel.transformFile)('index.js', {})\\n  .then(console.log, console.error)\\n```\\n\\nAfter upgrading to 5.7.4, the process hangs and I eventually get:\\n\\n```\\nFATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory\\n```\\n\\nI guess I can just use CPS, but there doesn't seem to be a reason why it would break. Thoughts?\\n",
+        "repo": "babel/babel"
+    },
+    {
+        "number": 25567,
+        "title": "Angular6 generate component,app.module.ts file become chaos",
+        "body": "I created it this way before:\\r\\n**ng new project --skip-install** and **npm install**\\r\\nBecause I can't continue running projects 95% of the time\\r\\n\\r\\n![1](https://user-images.githubusercontent.com/23206231/44307239-79b1fc00-a3d1-11e8-9fc2-c717ac619e40.png)\\r\\n\\r\\n",
+        "repo": "angular/angular"
+    },
+    {
+        "number": 4459,
+        "title": "Making parser or printer async",
+        "body": "This is a feature request, which may be useful for plugins that delegate parsing or compiling to an external processes. I can recall at least `prettier-plugin-ruby` (see [its parser.js](https://github.com/iamsolankiamit/prettier-ruby/blob/04de15a45869ce6ea7cfaac29ecda34ab15ccef7/src/parser.js#L7-L11)) and `prettier-plugin-elm` ([parser.js](https://github.com/gicentre/prettier-plugin-elm/blob/1a15233d580a68d49dbf1ab4455863e0f9cc74dc/src/parser.js#L6-L11)) that do this.\\r\\n\\r\\nAt the moment, when Prettier is given a markdown file, the code blocks in it are parsed and printed sequentially, which means that each third-party process is spawned one after another. This can quickly slow things down and make _Format on save_ feel quite glitchy (2-3 seconds of wait time when there are 10-20 code blocks is a bit too much). It would be great if the plugins' `parse()` or `print()` methods could return promises and thus allow Prettier to process more than one fenced code block in parallel (e.g. in a queue).\\r\\n\\r\\nHow feasible this internal change would be? What are the downsides? Is there any possible gain in calling standard JavaScript parsers and printers asynchronously too (e.g. to do block parsing in workers)?\\r\\n\\r\\nCurious to know what you guys think!",
+        "repo": "prettier/prettier"
+    },
+    {
+        "number": 2904,
+        "title": "Not an issue but a question!",
+        "body": "Can I know using MPAndroidChart, it is possible to draw two real time functions on the same line chart. If, yes can you please help me. \\r\\n\\r\\nThanks.",
+        "repo": "PhilJay/MPAndroidChart"
+    },
+    {
+        "number": 58844,
+        "title": "Git menu missing in source control viewlet",
+        "body": "Issue Type: <b>Bug</b>\\r\\n\\r\\nCompare stable\\r\\n\\r\\n<img width=\\395\\\" alt=\\\"image\\\" src=\\\"https://user-images.githubusercontent.com/4674940/45654664-80e02e80-ba91-11e8-8dce-045948a7e360.png\\\">\\r\\n\\r\\nto the latest insider\\r\\n\\r\\n<img width=\\\"488\\\" alt=\\\"image\\\" src=\\\"https://user-images.githubusercontent.com/4674940/45654599-41194700-ba91-11e8-97c1-12ee75568951.png\\\">\\r\\n\\r\\n\\r\\nVS Code version: Code - Insiders 1.28.0-insider (7fcd81cd0f88bb2040f249b09cf6bdd83d9ea2ef, 2018-09-17T09:30:49.336Z)\\r\\nOS version: Darwin x64 16.7.0\\r\\n\\r\\n<details><summary>Extensions (20)</summary>\\r\\n\\r\\nExtension|Author (truncated)|Version\\r\\n---|---|---\\r\\nsolargraph|cas|0.17.6\\r\\ncodestream|Cod|0.11.1\\r\\ngitlens|eam|8.5.6\\r\\ntslint|eg2|1.0.39\\r\\nvsc-material-theme|Equ|2.4.2\\r\\nvscode-pull-request-github|Git|0.1.5\\r\\ncrazy|kie|0.0.2\\r\\nsvgpreview|kis|0.2.0\\r\\nvscode-azurestorage|ms-|0.4.1\\r\\nazure-account|ms-|0.4.3\\r\\nazurecli|ms-|0.4.2\\r\\nGo|ms-|0.6.89\\r\\nvsliveshare|ms-|0.3.666\\r\\nvscode-docker|Pet|0.2.0\\r\\nmaterial-icon-theme|PKi|3.6.0\\r\\nruby|reb|0.20.0\\r\\nvscode-workspacecontains-canary|rob|0.0.2\\r\\nkustovscode|sea|0.0.1\\r\\nphp-syntax-visualizer|vsc|0.0.1\\r\\nvscode-open-in-github|ziy|1.3.5\\r\\n\\r\\n(2 theme extensions excluded)\\r\\n\\r\\n</details>\\r\\n<!-- generated by issue reporter -->\"",
+        "repo": "microsoft/vscode"
+    },
+    {
+        "number": 10023,
+        "title": "fail_bounds_check in unstable.rs should return !",
+        "body": "This tells LLVM that the function returns, and will hopefully help codegen to place the failing bounds check function calls at the end of the codegen'd function instead of inline with the rest of the code.\\n\\nIt would also be great to have a before/after analysis of some bounds checks to see if this improves codegen at all.\\n",
+        "repo": "rust-lang/rust"
+    },
+    {
+        "number": 19071,
+        "title": "x/mobile: X11 Key Events",
+        "body": "Please answer these questions before submitting your issue. Thanks!\\r\\n\\r\\n### What version of Go are you using (`go version`)?\\r\\n1.7 (sorry i am using windows at the office, the issue occurs at home)\\r\\n\\r\\n### What operating system and processor architecture are you using (`go env`)?\\r\\nubuntu amd64 (sorry i am using windows at the office, the issue occurs at home)\\r\\n\\r\\n### What did you do?\\r\\nrun flappy gopher\\r\\n\\r\\n### What did you expect to see?\\r\\nkey events are triggered\\r\\n\\r\\n### What did you see instead?\\r\\nno key events triggered, and close button not functional.\\r\\n\\r\\nkey events are not yet implemented at \\r\\n- app/x11.go \\r\\n- app/x11.c \\r\\n\\r\\nbut shiny have implemented this: \\r\\nhttps://godoc.org/golang.org/x/exp/shiny/driver/internal/x11key\\r\\n\\r\\nShould gomobile reuse shiny?\\r\\n",
+        "repo": "golang/go"
+    },
+    {
+        "number": 17052,
+        "title": "Restore Previous Windows On Start Behavior?",
+        "body": "Setting in question is: File>Settings>Core>Restore Previous Windows On Start\\r\\n\\r\\nFirst let's open a few files on atom, let's say we opened: banana.txt, apple.txt, and watermelon.txt. Then we close atome.\\r\\n\\r\\n- If option is set to **NO**: next time atom is launched, everything is blank. If someotherfile.txt is opened via atom, that file will be shown.\\r\\n- If option is set to **YES**: next time atom is launched, everything is the way it was when atom was closed (banana.txt, apple.txt, and watermelon.txt are shown). If someotherfile.txt is opened via atom, that file will be shown.\\r\\n-If option is set to **ALWAYS**: next time atom is launched, everything is the way it was when atom was closed (banana.txt, apple.txt, and watermelon.txt are shown). **THIS IS WHERE THIS HAPPENS**. If someotherfile.txt is opened via atom, **TWO** instances of atom are launched, the first containing whatever atom had open when it was last closed, and the second contains someotherfile.txt.\\r\\n\\r\\nWhat I normally expect to happen is to open whatever was opened last time atom was closed (banana.txt, apple.txt, and watermelon.txt are shown) and add a new file/tab for the file that was opened (in this situation someotherfile.txt).\\r\\n\\r\\nHope I am right about this and that I did not get things messed up. I don't think this is how it's supposed to be right?",
+        "repo": "atom/atom"
+    },
+    {
+        "number": 9776,
+        "title": "class constraints",
+        "body": "I am looking for a way to get my derived class be inherited from a **generic** class.\\nThis is my naive attempt to get it:\\n\\n``` typescript\\nexport function create<T>(base: { new (value: string): T }) {\\n  return new class extends base {\\n    constructor() {\\n      super('hey');\\n    }\\n  };\\n}\\n```\\n\\nIt might be that I am just doing it wrong, but looks like a current limitation, if so:\\n-  allow class expressions to be declared with a constructor function that returns a generic class\\n\\nIt might require a new syntax for class constraints:\\n\\n``` typescript\\nexport function create<class T>(base: { new (value: string): T }) {\\n  return new class extends base {\\n    constructor() {\\n      super('hey');\\n    }\\n  };\\n}\\n```\\n",
+        "repo": "microsoft/TypeScript"
+    },
+    {
+        "number": 1219,
+        "title": "Logging in retrofit",
+        "body": "I use retrofit-1.9.0, and I'd like to log my requests with responses. For it, I create own OkHttpClient and add my Interceptor:\\n\\n```\\npublic class LoggingInterceptor implements Interceptor {\\n        @Override\\n        public com.squareup.okhttp.Response intercept(Chain chain) throws IOException {\\n            //some work for logging\\n            return chain.proceed(chain.request());\\n        }\\n    }\\n```\\n\\nBut after that, there are no logs in logcat by retrofit. I'd like to receive that logs. How can I solve my problem?\\n",
+        "repo": "square/retrofit"
+    },
+    {
+        "number": 108,
+        "title": "Typo in install script",
+        "body": "netdata-installer.sh#L103  \\n- web files     at ${NETDATA_PREFIX}/usr/share/web/netdata\\n\\nShouldn't this be \\n- web files     at ${NETDATA_PREFIX}/usr/share/netdata/web\\n",
+        "repo": "netdata/netdata"
+    },
+    {
+        "number": 2752,
+        "title": "[Ember.js] Keyboard shortcuts",
+        "body": "Have a good read of #1463!\\n\\nThe Ghost app has a number of different types of keyboard shortcuts:\\n- Markdown shortcuts, like `ctrl + shift + i` for the image upload \\n- Editor shortcuts like `ctrl + s` to save\\n- component shortcuts like `esc` to clear a notification or the tag suggestion bubble\\n- Navigation shortcuts like up and down arrows to move through the tag suggestion bubble\\n\\nThese are just the start of what we want to do. Ideally we want to have a whole set of action shortcuts for navigating around the admin like press `n` when not in a content editable field to make a new post.\\n\\nIt would also be good to have `esc` cause all modals, popovers, notifications, etc to close.\\n\\nWe also need to overhaul the existing shortcuts to make them not clash with foreign characters in various locales, see #1463 for the epic which links to most of the existing bugs.\\n\\nBecause we want to have to many different types of shortcut, we need to have a holistic approach to implementing them. We need to decide on if we want to use a tool or library to help us, if there is a truly \\Ember\\\" way to do this, and what it ought to look like - do the markdown shortcuts need to live elsewhere to the navigation ones, etc?\\n\\nSee this [comment](https://github.com/TryGhost/Ghost/issues/2752#issuecomment-45213684) for details of what the outcome from this issue should be.\\n\"",
+        "repo": "TryGhost/Ghost"
+    },
+    {
+        "number": 45959,
+        "title": "QPS ",
+        "body": "I want to testing elasticsearch 7.X QPS,\\r\\nbefore I use YCSB,but 7.x move type\\r\\nHow do you recommend me to do QPS testing?\\r\\nI'm learning to use elasticsearch ",
+        "repo": "elastic/elasticsearch"
+    },
+    {
+        "number": 4377,
+        "title": "Android Widget",
+        "body": "Is it possible to write an Android widget (that goes on the home screen) with react-native? If not is there any plan to support this? Just curious...\\n",
+        "repo": "facebook/react-native"
+    },
+    {
+        "number": 157,
+        "title": "Feature request: Web SQL Database API to\\u00a0open an\\u00a0arbitrary SQLite database (provided\\u00a0that the\\u00a0filename is\\u00a0known)",
+        "body": "This\\u00a0is\\u00a0a\\u00a0feature\\u00a0request.\\n\\nI\\u00a0wonder whether node-webkit could be altered to\\u00a0give the\\u00a0[Web SQL Database API](https://github.com/rogerwang/node-webkit/wiki/Save-persistent-data-in-app) (which obviously has the\\u00a0SQLite nature) an\\u00a0additional ability to\\u00a0open an\\u00a0arbitrary SQLite database (provided that the\\u00a0filename is\\u00a0known).\\n\\nTypical use case for that feature would be an\\u00a0SQLite file that is either located beside the\\u00a0node-webkit application (in\\u00a0the\\u00a0same directory or\\u00a0in\\u00a0some subdirectory nearby) or\\u00a0open [in\\u00a0a\\u00a0file dialog](https://github.com/rogerwang/node-webkit/wiki/File-dialogs) and\\u00a0then the\\u00a0node-webkit application reads and writes some data with\\u00a0SQL\\u00a0queries.\\n\\n(That would allow a node-webkit application similar to the [SQLite Manager](https://addons.mozilla.org/firefox/addon/sqlite-manager/) addon of\\u00a0Firefox, for\\u00a0example.)\\n",
+        "repo": "nwjs/nw.js"
+    },
+    {
+        "number": 1948,
+        "title": "pickDefault() & pickDefaults()",
+        "body": "I wrote these for myself, but figured I would submit them in case it might be valuable for main lodash.  I tried to write a decent explanation of how they work and put some example use code at the bottom.  If it's something that would be useful, I'm happy to submit a pull request.\\n\\n``` es6\\nimport isEmpty from 'lodash/isEmpty'\\nimport get from 'lodash/get'\\nimport set from 'lodash/set'\\nimport isString from 'lodash/isString'\\nimport isObject from 'lodash/isObject'\\nimport assign from 'lodash/assign'\\nimport reduce from 'lodash/reduce'\\n\\n\\nfunction pickDefault (destKey, destObj, sourceObj, sourceKey=destKey) {\\n  /* #pickDefault - Picks deep key in sourceObj as defaults on destObj.\\n\\n    Arguments:\\n    1. destKey (String)   : Key in the destination object to map to set defaults. (required)\\n    2. destObj (Object)   : Object that will recieve assigned properties. (required)\\n    3. sourceObj (Object) : Object to search for key values. (required)\\n    4. sourceKey (String) : Key path in source object to search for key value. Defaults to\\n                            destKey\\n  */\\n  if (\\n    isEmpty( get(destObj, destKey) )\\n  )  {\\n    return set({}, destKey, get(sourceObj, sourceKey))\\n  }\\n}\\n\\n\\n// Example\\npickDefault('name', {}, {name: 'Barney'})\\n// -> {name: 'Barney'}\\n\\npickDefault('name', {name: 'Fred'}, {name: 'Barney'})\\n// -> {name: 'Fred'}\\n\\npickDefault('firstName', {}, {name: 'Barney'}, 'name')\\n// -> {firstName: 'Barney'}\\n\\n\\n\\nfunction pickDefaults (destKeys, destObj, sourceObj) {\\n  /* #pickDefault - Picks a list of keys from source object as default values for dest object.\\n\\n    Arguments:\\n    1. destKey (String)   : Key in the destination object to map to set defaults. (required)\\n    2. destObj (Object)   : Object that will recieve assigned properties. (required)\\n    3. sourceObj (Object) : Object to search for key values. (required)\\n    4. sourceKey (String) : Key path in source object to search for key value. Defaults to\\n                            destKey\\n  */\\n  return destKeys.reduce(function (result, destKey) {\\n    return assign(\\n      result,\\n      pickDefault(destKey, destObj, sourceObj)\\n    )\\n  }, destObj)\\n}\\n\\n\\n// Example\\npickDefaults(['firstName', 'lastName'], {}, {firstName: 'Barnaby', lastName: 'Jones'})\\n// -> {firstName: 'Barnaby', lastName: 'Jones'}\\n\\npickDefaults(['firstName', 'lastName'], {lastName: 'Willard'}, {firstName: 'Fred', lastName: 'Flintstone'})\\n// -> {firstName: 'Fred', lastName: 'Willard'}\\n```\\n",
+        "repo": "lodash/lodash"
+    },
+    {
+        "number": 86,
+        "title": "Sass support?",
+        "body": "Hello, I know how to support sass files using webpack, but I am little confused if/how that is supported in gatsbyjs as webpack config seems buried in source of gatsby.\\n\\nThanks in advance for help.\\n",
+        "repo": "gatsbyjs/gatsby"
+    }
+]

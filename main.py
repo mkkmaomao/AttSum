@@ -229,7 +229,7 @@ def evaluate(model, iterator, best_rouge):
     # logger.info(f'\tEval RougeL_r: {rougeL_r_score}')
 
     if rouge_score > best_rouge:
-        torch.save(model.state_dict(), args.best_rouge_model_save_path) # java_both.brouge.pt
+        torch.save(model.state_dict(), args.best_rouge_model_save_path) 
         logger.info(f'\tSave Best Rouge on Val')
     return rouge_score
 
@@ -286,7 +286,7 @@ def generate(model, iterator):
             # target_ids [trg_len, batch_size]
             # pred_tokens [batch_size, tokens]
             pred_tokens = decode_batch_ids(logits.transpose(0, 1))
-            target_tokens = decode_batch_ids(target_ids[1:].transpose(0, 1)) # jump bos token
+            target_tokens = decode_batch_ids(target_ids[1:].transpose(0, 1)) 
             golden_titles += target_tokens
             pred_titles += pred_tokens
 
@@ -344,6 +344,6 @@ if args.train:
         logger.info(f'**********************epoch {epoch}********************* | Time {epoch_mins}m {epoch_secs}s')
         rouge_score = train(model, train_dataloader, optimizer, best_rouge)
         best_rouge = rouge_score if rouge_score > best_rouge else best_rouge
-        torch.save(model.state_dict(), args.epoch_model_save_path.replace('.pt', f'.ep{epoch}.pt')) # java_both.ep{xx}.pt
+        torch.save(model.state_dict(), args.epoch_model_save_path.replace('.pt', f'.ep{epoch}.pt')) 
 
 
